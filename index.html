@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meih... Shani!</title>
+    <link rel="icon" href="./sakura-removebg-preview.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px); /* Move the arrow down */
+        }
+        100% {
+          transform: translateY(0); /* Return to the original position */
+        }
+      }
+      @keyframes scale {
+        0% {
+          /* transform: scale(0); */
+          scale: 0.9;
+        }
+        50% {
+          /*transform: scale(1.3px); Move the arrow down */
+          scale: 1.2;
+        }
+        100% {
+          /*transform: scale(0); Return to the original position */
+          scale: 0.9;
+        }
+      }
+
+      .bounce-animation {
+        animation: bounce 1s infinite;
+      }
+      .bounce-animation-big {
+        animation: scale 1.5s infinite;
+      }
+      /* Optional styling for the overlay */
+      .popup-overlay {
+        background-color: rgba(153, 246, 128, 0.3);
+      }
+      #hamburger-btn {
+        transition: transform 0.3s ease; /* Smooth transition for rotation */
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="p-2 bg-emerald-900 flex justify-between items-center fixed z-50 top-0 left-0 w-full"
+    >
+      <a class="w-12 p-1 m-0 md:ml-2 rounded-lg bg-emerald-600" href="/"
+        ><img src="./Shani.png" alt="logo" class="w-full h-full"
+      /></a>
+      <div class="md:hidden">
+        <button id="hamburger-btn" class="text-white text-3xl">&#9776;</button>
+      </div>
+
+      <div
+        class="hidden md:flex justify-evenly gap-8 text-lg md:text-xl text-emerald-600 pr-2 items-center text-center"
+      >
+        <a
+          href="#aQuickHello"
+          class="hover:text-indigo-700 py-1 px-2 rounded-lg trasition-colors duration-500 hover:bg-gray-100"
+          >A Quick Hello</a
+        >
+        <a
+          href="#spareAMoment"
+          class="hover:text-teal-700 trasition-colors duration-500 hover:bg-teal-100 py-1 px-2 rounded-lg"
+          >Spare a Moment</a
+        >
+        <a
+          href="#peaceOut"
+          class="hover:text-yellow-700 trasition-colors duration-500 hover:bg-yellow-100 py-1 px-2 rounded-lg"
+          >Peace Out!</a
+        >
+      </div>
+      <div
+        id="hamburger-menu"
+        class="md:hidden absolute z-1 top-14 right-1 hidden flex flex-col bg-emerald-600 p-4 space-y-4 rounded-lg gap-1"
+      >
+        <a
+          href="#aQuickHello"
+          class="text-white w-full h-full border border-emerald-600 border-b-emerald-900"
+          >A Quick Hello</a
+        >
+        <a
+          href="#spareAMoment"
+          class="text-white w-full h-full border border-emerald-600 border-b-emerald-900"
+          >Spare A Moment</a
+        >
+        <a
+          href="#peaceOut"
+          class="text-white w-full h-full border border-emerald-600 border-b-emerald-900"
+          >Peace Out!</a
+        >
+      </div>
+    </nav>
+    <!-- sticky panel-->
+    <div
+      class="fixed z-50 bottom-4 right-2 bg-rose-100 rounded-lg p-4 justify-center items-center flex flex-col gap-4 border border-rose-200 shadow-yellow shadow-xl"
+    >
+      <a
+        href="https://www.facebook.com/profile.php?id=100073304042472"
+        target="_blank"
+        class="hover:text-blue-600 text-rose-700 trasition-color duration-300 hover:scale-[1.4]"
+      >
+        <i class="fab fa-facebook-f text-2xl"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/skipper8828/"
+        target="_blank"
+        class="hover:text-pink-600 text-rose-700 trasition-color duration-300 hover:scale-[1.4]"
+      >
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/8828-shanimaurya/"
+        target="_blank"
+        class="hover:text-blue-700 text-rose-700 trasition-color duration-300 hover:scale-[1.4]"
+      >
+        <i class="fab fa-linkedin-in text-2xl"></i>
+      </a>
+
+      <a
+        href="https://github.com/shani8828"
+        target="_blank"
+        class="hover:text-gray-900 text-rose-700 trasition-color duration-300 hover:scale-[1.4]"
+      >
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+    </div>
+    <!-- container -->
+    <div class="flex flex-col justify-center items-center w-full relative">
+      <div
+        id="aQuickHello"
+        class="w-full h-screen flex justify-center items-center text-center"
+      >
+        <div
+          class="bg-gray-100 text-indigo-700 p-8 w-[80vw] min-h-[71vh] rounded-xl flex flex-col justify-evenly items-center text-center border border-gray-200"
+        >
+          <div
+            class="flex flex-col md:flex-row-reverse gap-8 justify-center items-center"
+          >
+            <div class="m-8 md:m-0 bg-transparent rounded-xl w-70 md:w-96">
+              <img
+                src="./sakura-removebg-preview.png"
+                alt=""
+                class="relative rounded-xl w-full h-full"
+              />
+            </div>
+            <h1 class="h1 text-2xl md:text-3xl lg:text-4xl w-full text-ce nter">
+              Hey fam! It’s
+              <span
+                class="text-transparent font-semibold bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-600 text-center"
+              >
+                Shani</span
+              >, your go-to for good vibes, laughs, and love. So lucky to have
+              you all in my life. Let’s make more memories!
+            </h1>
+          </div>
+          <button
+            id="scrollBtn1"
+            class="text-4xl text-transparent bounce-animation bg-clip-text bg-gradient-to-b from-teal-700 to-teal-300"
+          >
+            ⇣
+          </button>
+        </div>
+      </div>
+      <div
+        id="spareAMoment"
+        class="w-full h-screen flex justify-center items-center text-center"
+      >
+        <div
+          class="bg-teal-100 text-teal-700 p-8 w-[80vw] min-h-[71vh] rounded-xl flex flex-col justify-evenly items-center text-center border border-teal-200"
+        >
+          <h1 class="text-xl md:text-2xl lg:text-3xl">
+            Hey loves! 💖<br />I’d truly appreciate your thoughts. It’ll only
+            take a second, and your input means the world to me. Can you spare a
+            moment?
+          </h1>
+          <button
+            id="openFormBtn"
+            class="bounce-animation-big font-semibold transition-all duration-500 text-lg md:text-xl lg:text-2xl border border-teal-400 rounded-lg py-1 px-4 text-teal-100 bg-teal-700 hover:bg-teal-500 transition-all hover:shadow-2xl duration-500 shadow-xl"
+          >
+            I’m All Ears, Share with Me!
+          </button>
+          <button
+            id="scrollBtn2"
+            class="text-4xl text-transparent bounce-animation bg-clip-text bg-gradient-to-b from-yellow-300 to-orange-600"
+          >
+            ⇣
+          </button>
+        </div>
+
+        <!-- Popup Modal (Hidden by default) -->
+        <div
+          id="popupModal"
+          class="hidden fixed inset-0 flex items-center justify-center z-50"
+        >
+          <div class="popup-overlay absolute inset-0"></div>
+          <div
+            class="w-[300px] md:w-[690px] lg:w-[800px] max-h-[75vh] h-[70vh]"
+          >
+            <div
+              class="p-4 md:p-6 rounded-lg shadow-lg z-10 relative bg-teal-200 border border-teal-300 text-teal-800"
+            >
+              <h2 class="text-2xl mb-4 text-center font-semibold">
+                We’d love to hear your thoughts!
+              </h2>
+
+              <!-- Form inside the popup -->
+              <form id="myForm">
+                <div class="mb-3">
+                  <label for="question1" class="block text-gray-700 text-left"
+                    >If you feel like it, I’d love to know your name! But no
+                    pressure at all!</label
+                  >
+                  <input
+                    type="text"
+                    id="question1"
+                    name="question1"
+                    class="w-full p-2 border border-teal-300 bg-teal-100 rounded-lg"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="question2" class="block text-gray-700 text-left"
+                    >*Tell me something I did that you didn't like, but didn't
+                    tell me.</label
+                  >
+                  <textarea
+                    id="question2"
+                    name="question2"
+                    rows="2"
+                    class="w-full p-2 border border-teal-300 bg-teal-100 rounded-lg"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="question3" class="block text-gray-700 text-left"
+                    >*Tell me something you really think I should change.</label
+                  >
+                  <textarea
+                    id="question3"
+                    name="question3"
+                    rows="2"
+                    class="w-full p-2 border border-teal-300 bg-teal-100 rounded-lg"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="question4" class="block text-gray-700 text-left"
+                    >*What's one question you've always wanted to ask me but
+                    never did?</label
+                  >
+                  <textarea
+                    id="question4"
+                    name="question4"
+                    rows="2"
+                    class="w-full p-2 border border-teal-300 bg-teal-100 rounded-lg"
+                    required
+                  ></textarea>
+                </div>
+
+                <div
+                  class="flex justify-between items-center flex-col md:flex-row gap-3"
+                >
+                  <button
+                    type="submit"
+                    class="bg-green-300 border border-green-400 text-green-700 px-4 py-2 rounded-lg hover:bg-green-400 transition-colors duration-500 hover:text-green-800"
+                  >
+                    My Thoughts Are In!
+                  </button>
+                  <button
+                    type="button"
+                    id="closeBtn"
+                    class="bg-rose-300 border border-rose-400 text-rose-700 px-4 py-2 rounded-lg hover:bg-red-400 transition-colors duration-500 hover:text-rose-800"
+                  >
+                    Exit with Love
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="peaceOut"
+        class="w-full h-screen flex justify-center items-center text-center"
+      >
+        <div
+          class="bg-yellow-100 text-yellow-700 p-8 w-[80vw] min-h-[71vh] rounded-xl flex flex-col justify-evenly items-center text-center border border-yellow-200"
+        >
+          <h1 class="text-xl md:text-2xl lg:text-3xl">
+            Kudos to you for being amazing!<br />Savor this <span
+              class="text-transparent font-semibold bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-600 text-center"
+              >delicious</span
+            > day!
+          </h1>
+        </div>
+      </div>
+      <div class="bg-gray-700 w-full text-white text-center p-1">
+        Made by
+        <span
+          class="text-transparent font-semibold bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-600 text-center"
+          >Shani</span
+        >
+        with 💝
+      </div>
+    </div>
+    <script>
+      // JavaScript to scroll down by 50vh on button click
+      document
+        .getElementById("scrollBtn1")
+        .addEventListener("click", function () {
+          window.scrollBy({
+            top: window.innerHeight * 0.8, // Scroll down by 80vh from where it is triggered
+            behavior: "smooth", // Smooth scroll effect
+          });
+        });
+      document
+        .getElementById("scrollBtn2")
+        .addEventListener("click", function () {
+          window.scrollBy({
+            top: window.innerHeight * 0.8, // Scroll down by 80vh from where it is triggered
+            behavior: "smooth", // Smooth scroll effect
+          });
+        });
+      // Toggle the hamburger menu visibility
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const hamburgerMenu = document.getElementById("hamburger-menu");
+
+      // const openFormBtn = document.getElementById("openFormBtn");
+      // const popupModal = document.getElementById("popupModal");
+      // const closeBtn = document.getElementById("closeBtn");
+      // Get elements
+      const openFormBtn = document.getElementById("openFormBtn");
+      const popupModal = document.getElementById("popupModal");
+      const closeBtn = document.getElementById("closeBtn");
+      const myForm = document.getElementById("myForm");
+
+      hamburgerBtn.addEventListener("click", () => {
+        hamburgerMenu.classList.toggle("hidden");
+        event.stopPropagation(); // Prevents the click from bubbling up to the document
+      });
+
+      // Form submission logic
+      myForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Create FormData object
+        const formData = new FormData(myForm);
+
+        // Send form data to Google Apps Script Web App
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwrZyN6Hcrgpj4obJCYJeb31D6tFYFJTYjIFottphhrEH69zpPKzJ-FwnrRWSQ0JfJp/exec",
+          {
+            method: "POST",
+            body: formData,
+          }
+        )
+          .then((response) => {
+            if (response.ok) {
+              // Show the alert only after successful submission
+              alert("Thank you for your input!");
+
+              // Reset the form after submission
+              myForm.reset();
+
+              // Optionally close the popup modal after submission
+              popupModal.classList.add("hidden");
+            } else {
+              // Handle any errors from the server side
+              alert("Something went wrong. Please try again!");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert(
+              "Big thanks for sharing your heart with me!" //Data is being sent to sheet that's why error msg is changed to success msg by me.
+            );
+            myForm.reset();
+          });
+      });
+
+      // Close the hamburger menu if clicking outside of it
+      document.addEventListener("click", (event) => {
+        if (
+          !hamburgerBtn.contains(event.target) &&
+          !hamburgerMenu.contains(event.target)
+        ) {
+          hamburgerMenu.classList.add("hidden");
+        }
+      });
+
+      // Close the hamburger menu when a nav item is clicked inside the hamburger menu
+      const navItems = hamburgerMenu.querySelectorAll("a");
+      navItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburgerMenu.classList.add("hidden");
+        });
+      });
+
+      // Open the popup when the button is clicked
+      openFormBtn.addEventListener("click", () => {
+        popupModal.classList.remove("hidden");
+      });
+
+      // Close the popup when the close button is clicked
+      closeBtn.addEventListener("click", () => {
+        popupModal.classList.add("hidden");
+      });
+
+      // Close the popup if the overlay is clicked
+      popupModal
+        .querySelector(".popup-overlay")
+        .addEventListener("click", () => {
+          popupModal.classList.add("hidden");
+        });
+    </script>
+  </body>
+</html>
